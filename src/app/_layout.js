@@ -16,14 +16,18 @@ export default function TabsLayout() {
         name="index"
         options={{
           title: "Prayers",
-          tabBarIcon: ({ color }) => <Text style={{ fontSize: 18, color }}>🕌</Text>,
+          tabBarIcon: ({ color }) => (
+            <Text style={{ fontSize: 18, color }}>🕌</Text>
+          ),
         }}
       />
       <Tabs.Screen
         name="about"
         options={{
           title: "About",
-          tabBarIcon: ({ color }) => <Text style={{ fontSize: 18, color }}>ℹ️</Text>,
+          tabBarIcon: ({ color }) => (
+            <Text style={{ fontSize: 18, color }}>ℹ️</Text>
+          ),
         }}
       />
     </Tabs>
