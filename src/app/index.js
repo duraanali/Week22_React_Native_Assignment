@@ -18,32 +18,39 @@ export default function Prayers() {
 
   // STEP 2 — Which prayer is happening now?
   // Add this line. It gives you 0, 1, 2, 3, or 4.
-  //   const currentIndex = getCurrentPrayerIndex(now);
+  const currentIndex = getCurrentPrayerIndex(now);
 
   return (
     <SafeAreaView style={styles.screen} edges={["top"]}>
-      {/* STEP 1 — Add style={styles.content} to the View below. */}
+      
+      <View style={styles.content}>
+        
+      </View>
       <View>
         <Text style={styles.title}>Prayer Times</Text>
         <Text style={styles.hint}>
           Some text is missing a style. The list stays empty until you add the prayers.
         </Text>
 
-        {/* STEP 1 — Add style={styles.hint} to the Text below. */}
-        {/* STEP 5 — Then replace the words with prayers[currentIndex].name */}
-        <Text>Current prayer will show here.</Text>
+       
+        <Text style={styles.hint}>Current prayer: {prayers[currentIndex].name}</Text>
 
         {/* STEP 3 — Add data to the FlatList below. */}
         <FlatList
+          data={prayers}
           renderItem={({ item, index }) => {
             // item is one prayer. index is its position, from 0 to 4.
+            
+
             // STEP 1 — Add style={styles.hint} to the Text below.
             // STEP 4 — Replace that Text with the prayer name and time.
             // Use styles.name and styles.time.
             // When index matches currentIndex, also use styles.rowCurrent.
             return (
-              <View style={styles.row}>
-                <Text>Show the prayer name and its time here.</Text>
+              <View style={[styles.row, index === currentIndex && styles.rowCurrent]}>
+                
+                <Text style={styles.name}>{item.name}</Text>
+                <Text style={styles.time}>{item.time}</Text>
               </View>
             );
           }}

@@ -6,15 +6,17 @@ export default function About() {
   return (
     <SafeAreaView style={styles.screen} edges={["top"]}>
       {/* STEP 1 — Add style={styles.content} to the View below. */}
-      <View>
+      <View style={styles.content}> 
         <Text style={styles.title}>About</Text>
-        <Text style={styles.note}>Add a style to the sentence below.</Text>
+        <Text style={styles.body}>Muslims pray five times a day: Fajr, Dhuhr, Asr,
+         Maghrib, and Isha. These prayers help Muslims
+        remember Allah throughout the day.</Text>
 
         {/* STEP 1 — Add style={styles.body} to the Text below. */}
         {/* STEP 2 — Then replace the words with one or two sentences
             about the five daily prayers. */}
-        <Text>
-          Replace this sentence with one or two sentences about the five daily prayers.
+        <Text style={styles.body}>
+          The five daily prayers and their times.
         </Text>
       </View>
     </SafeAreaView>
